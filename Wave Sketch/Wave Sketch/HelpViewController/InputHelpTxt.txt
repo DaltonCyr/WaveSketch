@@ -1,0 +1,72 @@
+Inputing Values
+
+  : Values for voltage, frequency, and
+    shift are entered by taping the desired
+    corresponding input box. A key board will
+    appear and you can input your value. To
+    exit the keyboard, just tap anywhere out
+    of the keyboard
+
+Selecting Units
+
+  : Data units are changed by scrolling.
+    Just put your finger on top of the unit
+    you want to change and slide up or down
+    and you will see the unit change
+
+Voltage Values
+
+  : For the voltage, +5V to -5V is the
+    range.
+    
+  : When selecting mV the range
+    is +5000 mV to -5000 mV.
+    
+  : To get a negative voltage value select
+    the voltage unit's - V or - mV.
+    
+  : Only on GuideSketch DC can the Max V
+    and the Min V be equal. Any other
+    time the voltages must have at least
+    a 10 mV difference
+    
+Frequency Values
+
+    : When selecting Hz unit, the frequency ranges
+      are 1 to 100000 Hz.
+    
+    : When selecting kHz unit, the frequency ranges
+      are 0.001 to 100 kHz
+    
+    : No values less than 1 Hz are supported
+    
+    : The DC wave option in GuideSketch still needs
+      a frequency
+    
+Shift Values
+
+    : When NO Shift is desired, you must input a
+      "0" for the shift value and select the unit
+      "N/A" for not applicable
+    
+    : When a Directional Shift is desired, you
+      must input the absolute value of the shift
+      degree and select a direction "Left" or "Right"
+      
+    : "N/A" can not be the unit of a directional shift.
+
+Channel Selection
+
+    : Currently the WaveSketch only supports dual
+      channel output.
+      
+    : Choosing the correct channel is important. If
+      you want to have two unique wave outputting at
+      the same time they must have different select
+      channels when you make the wave.
+      
+    : "CH 1" selection corresponds to BNC Jack 1.
+      "CH 2" selection corresponds to BNC Jack 2.
+
+
+    

@@ -1,0 +1,74 @@
+Drawing
+
+  : To start drawing - just press your finger
+    inside of the dark grey drawing square
+    that contains the white guidelines and
+    move your finger.
+
+  : Drawing Requirements - You must draw from
+    left to right. If your finger goes to
+    the left, the drawing square will stop
+    you from drawing anymore until you press
+    the fix drawing button. This button deletes
+    the right to left point you drew and allows
+    the drawing to begin again.
+
+  : Drawing Tip 1 - To keep your drawing from
+    have un-straight lines, it is recommended to
+    draw as quickly as possible to stop the
+    device from picking up a bunch of extra
+    points that causes the line to be squiggly.
+
+  : Drawing Tip 2 - If you want an extremely
+    straight line, start a drawing point by
+    touching and slightly moving your finger
+    in the direction you want the line to go
+    and then stop by picking up your finger.
+    Next press down where you want the
+    straight line end and slightly move your finger
+    and it will produce a straight line from the
+    start point to the end point.
+
+  : Drawing Tip 3 - Draw as large as possible.
+    The larger you draw, the greater the
+    resemblance the output wave will have
+    compared to the drawing. When you draw
+    smaller, you may not see some of the
+    squiggly lines you accidentally make
+    and will not see until the output of
+    the wave
+
+
+Saving FreeSketch Waves
+
+  : Save Button - To correctly save a FreeSketch
+    wave, all of the wave inputs and units must
+    be inputed, all values and units must be in
+    the supported ranges, and a wave must be
+    hand drawn to save. If something is missing
+    an Error alert will show the missing
+    information.
+
+  : Wave File Name - The user can choose to input
+    a customized name inside of the file name input
+    box or opt out by just pressing save. The app
+    will always save your wave with the type of
+    WaveSketch and an unique identifier attached
+    to the end of the name.
+
+  : File Location - All of the files saved from
+    app will be saved into a WavesSketch File
+    located in your files app. To access them,
+    starting from the home screen, tap the file
+    app. Then select "On My iPhone" under the
+    location tab. A screen of files will appear
+    and select the WaveSketch File. All of
+    the saved wave files are located here.
+
+Clearing Drawing / Inputs
+
+  : To clear a custom wave drawing press
+    the clear button at the top left of the
+    screen. To clear the input data and reset
+    the units double tap the clear button at
+    the top left of the screen.

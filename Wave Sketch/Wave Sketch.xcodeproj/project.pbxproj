@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C799D9F26F03D50000FA803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C799D9E26F03D50000FA803 /* AppDelegate.swift */; };
+		5C799DA126F03D50000FA803 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C799DA026F03D50000FA803 /* SceneDelegate.swift */; };
+		5C799DA326F03D50000FA803 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C799DA226F03D50000FA803 /* ViewController.swift */; };
+		5C799DA626F03D50000FA803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C799DA426F03D50000FA803 /* Main.storyboard */; };
+		5C799DA826F03D53000FA803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C799DA726F03D53000FA803 /* Assets.xcassets */; };
+		5C799DAB26F03D53000FA803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C799DA926F03D53000FA803 /* LaunchScreen.storyboard */; };
+		5C7C4C142725E1C000B6F78B /* ErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C132725E1C000B6F78B /* ErrorHandle.swift */; };
+		5C7C4C172725E26B00B6F78B /* FreeSketchPickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C162725E26B00B6F78B /* FreeSketchPickers.swift */; };
+		5C7C4C192725E46C00B6F78B /* AlertPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C182725E46C00B6F78B /* AlertPopUp.swift */; };
+		5C7C4C1B2725E4EA00B6F78B /* FreeSketchTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C1A2725E4EA00B6F78B /* FreeSketchTextFields.swift */; };
+		5C7C4C1E27261ACB00B6F78B /* GuideSketchPickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C1D27261ACB00B6F78B /* GuideSketchPickers.swift */; };
+		5C7C4C2027261E1D00B6F78B /* GuideDrawTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C1F27261E1D00B6F78B /* GuideDrawTextFields.swift */; };
+		5C7C4C262726292600B6F78B /* GuideErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C252726292600B6F78B /* GuideErrorHandle.swift */; };
+		5C7C4C282726296E00B6F78B /* GuideAlertPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C272726296E00B6F78B /* GuideAlertPopUp.swift */; };
+		5C7C4C2A27263BEA00B6F78B /* DrawingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C2927263BEA00B6F78B /* DrawingFunctions.swift */; };
+		5C7C4C2C2726608800B6F78B /* GuideSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C2B2726608800B6F78B /* GuideSaveFile.swift */; };
+		5C7C4C2E272663F700B6F78B /* FreeSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C2D272663F700B6F78B /* FreeSaveFile.swift */; };
+		5C7C4C312727A2DE00B6F78B /* VoltageListConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C302727A2DE00B6F78B /* VoltageListConverter.swift */; };
+		5C8261942744B04C008891AE /* ImportDrawTextFeild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8261932744B04C008891AE /* ImportDrawTextFeild.swift */; };
+		5C8261962744C54F008891AE /* ConnectAWGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8261952744C54F008891AE /* ConnectAWGViewController.swift */; };
+		5CADA13026F6AA8F001222F1 /* FreeSketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA12F26F6AA8F001222F1 /* FreeSketchViewController.swift */; };
+		5CADA13826F6C700001222F1 /* GuidedSketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA13726F6C700001222F1 /* GuidedSketchViewController.swift */; };
+		5CADA13A26F6DEA8001222F1 /* FreeDrawVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA13926F6DEA8001222F1 /* FreeDrawVeiw.swift */; };
+		5CADA14026F816C9001222F1 /* GuidedDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA13F26F816C9001222F1 /* GuidedDrawView.swift */; };
+		5CADA14226F8251E001222F1 /* ImportDrawVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA14126F8251E001222F1 /* ImportDrawVeiw.swift */; };
+		5CADA14626F82791001222F1 /* ImportSketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA14526F82791001222F1 /* ImportSketchViewController.swift */; };
+		5CB2C5B8271F926A0019AEA9 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2C5B7271F926A0019AEA9 /* HelpViewController.swift */; };
+		5CE0E586272B7F0600AD523B /* DrawImportWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E585272B7F0600AD523B /* DrawImportWave.swift */; };
+		5CE0E588272B852500AD523B /* ImportSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E587272B852500AD523B /* ImportSaveFile.swift */; };
+		5CE0E58A272B8EFF00AD523B /* ImportPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E589272B8EFF00AD523B /* ImportPopUp.swift */; };
+		5CE0E58C272BAFAC00AD523B /* WaveInfoDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E58B272BAFAC00AD523B /* WaveInfoDisplay.swift */; };
+		5CE0E591272C59B400AD523B /* ImportErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E590272C59B400AD523B /* ImportErrorHandle.swift */; };
+		5CE0E593272D011E00AD523B /* HelpContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E592272D011E00AD523B /* HelpContentView.swift */; };
+		5CE0E595272D926B00AD523B /* InputHelpTxt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CE0E594272D926B00AD523B /* InputHelpTxt.txt */; };
+		5CE0E597272DCB8100AD523B /* GuideHelpTxt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CE0E596272DCB8100AD523B /* GuideHelpTxt.txt */; };
+		5CE0E599272DD73900AD523B /* FreeSketchHelpTxt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CE0E598272DD73900AD523B /* FreeSketchHelpTxt.txt */; };
+		5CE0E59D272E314900AD523B /* ImportSketchHelpTxt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CE0E59C272E314800AD523B /* ImportSketchHelpTxt.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C799DB226F03D54000FA803 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C799D9326F03D50000FA803 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C799D9A26F03D50000FA803;
+			remoteInfo = "Wave Sketch";
+		};
+		5C799DBD26F03D54000FA803 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C799D9326F03D50000FA803 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C799D9A26F03D50000FA803;
+			remoteInfo = "Wave Sketch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C799D9B26F03D50000FA803 /* Wave Sketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Sketch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C799D9E26F03D50000FA803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C799DA026F03D50000FA803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5C799DA226F03D50000FA803 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C799DA526F03D50000FA803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C799DA726F03D53000FA803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C799DAA26F03D53000FA803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C799DAC26F03D53000FA803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C799DB126F03D54000FA803 /* Wave SketchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wave SketchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C799DBC26F03D54000FA803 /* Wave SketchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wave SketchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7C4C132725E1C000B6F78B /* ErrorHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandle.swift; sourceTree = "<group>"; };
+		5C7C4C162725E26B00B6F78B /* FreeSketchPickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeSketchPickers.swift; sourceTree = "<group>"; };
+		5C7C4C182725E46C00B6F78B /* AlertPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopUp.swift; sourceTree = "<group>"; };
+		5C7C4C1A2725E4EA00B6F78B /* FreeSketchTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeSketchTextFields.swift; sourceTree = "<group>"; };
+		5C7C4C1D27261ACB00B6F78B /* GuideSketchPickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideSketchPickers.swift; sourceTree = "<group>"; };
+		5C7C4C1F27261E1D00B6F78B /* GuideDrawTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDrawTextFields.swift; sourceTree = "<group>"; };
+		5C7C4C252726292600B6F78B /* GuideErrorHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideErrorHandle.swift; sourceTree = "<group>"; };
+		5C7C4C272726296E00B6F78B /* GuideAlertPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideAlertPopUp.swift; sourceTree = "<group>"; };
+		5C7C4C2927263BEA00B6F78B /* DrawingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingFunctions.swift; sourceTree = "<group>"; };
+		5C7C4C2B2726608800B6F78B /* GuideSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideSaveFile.swift; sourceTree = "<group>"; };
+		5C7C4C2D272663F700B6F78B /* FreeSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeSaveFile.swift; sourceTree = "<group>"; };
+		5C7C4C302727A2DE00B6F78B /* VoltageListConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoltageListConverter.swift; sourceTree = "<group>"; };
+		5C8261932744B04C008891AE /* ImportDrawTextFeild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDrawTextFeild.swift; sourceTree = "<group>"; };
+		5C8261952744C54F008891AE /* ConnectAWGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAWGViewController.swift; sourceTree = "<group>"; };
+		5CADA12F26F6AA8F001222F1 /* FreeSketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeSketchViewController.swift; sourceTree = "<group>"; };
+		5CADA13726F6C700001222F1 /* GuidedSketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedSketchViewController.swift; sourceTree = "<group>"; };
+		5CADA13926F6DEA8001222F1 /* FreeDrawVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeDrawVeiw.swift; sourceTree = "<group>"; };
+		5CADA13F26F816C9001222F1 /* GuidedDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedDrawView.swift; sourceTree = "<group>"; };
+		5CADA14126F8251E001222F1 /* ImportDrawVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDrawVeiw.swift; sourceTree = "<group>"; };
+		5CADA14526F82791001222F1 /* ImportSketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportSketchViewController.swift; sourceTree = "<group>"; };
+		5CB2C5B7271F926A0019AEA9 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		5CE0E585272B7F0600AD523B /* DrawImportWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawImportWave.swift; sourceTree = "<group>"; };
+		5CE0E587272B852500AD523B /* ImportSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportSaveFile.swift; sourceTree = "<group>"; };
+		5CE0E589272B8EFF00AD523B /* ImportPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPopUp.swift; sourceTree = "<group>"; };
+		5CE0E58B272BAFAC00AD523B /* WaveInfoDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveInfoDisplay.swift; sourceTree = "<group>"; };
+		5CE0E590272C59B400AD523B /* ImportErrorHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportErrorHandle.swift; sourceTree = "<group>"; };
+		5CE0E592272D011E00AD523B /* HelpContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpContentView.swift; sourceTree = "<group>"; };
+		5CE0E594272D926B00AD523B /* InputHelpTxt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InputHelpTxt.txt; sourceTree = "<group>"; };
+		5CE0E596272DCB8100AD523B /* GuideHelpTxt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GuideHelpTxt.txt; sourceTree = "<group>"; };
+		5CE0E598272DD73900AD523B /* FreeSketchHelpTxt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FreeSketchHelpTxt.txt; sourceTree = "<group>"; };
+		5CE0E59C272E314800AD523B /* ImportSketchHelpTxt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ImportSketchHelpTxt.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C799D9826F03D50000FA803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C799DAE26F03D54000FA803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C799DB926F03D54000FA803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C799D9226F03D50000FA803 = {
+			isa = PBXGroup;
+			children = (
+				5C799D9D26F03D50000FA803 /* Wave Sketch */,
+				5C799D9C26F03D50000FA803 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C799D9C26F03D50000FA803 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C799D9B26F03D50000FA803 /* Wave Sketch.app */,
+				5C799DB126F03D54000FA803 /* Wave SketchTests.xctest */,
+				5C799DBC26F03D54000FA803 /* Wave SketchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C799D9D26F03D50000FA803 /* Wave Sketch */ = {
+			isa = PBXGroup;
+			children = (
+				5C799D9E26F03D50000FA803 /* AppDelegate.swift */,
+				5C799DA026F03D50000FA803 /* SceneDelegate.swift */,
+				5C799DA226F03D50000FA803 /* ViewController.swift */,
+				5C8261952744C54F008891AE /* ConnectAWGViewController.swift */,
+				5C799DA426F03D50000FA803 /* Main.storyboard */,
+				5CE0E58D272BB1D300AD523B /* HelpViewController */,
+				5C7C4C2F2727A29400B6F78B /* ImportSketch Extra Files */,
+				5C7C4C1C272619DA00B6F78B /* GuidSketch Extra Files */,
+				5C7C4C152725E1EB00B6F78B /* FreeSketch Extra Files */,
+				5C799DA726F03D53000FA803 /* Assets.xcassets */,
+				5C799DA926F03D53000FA803 /* LaunchScreen.storyboard */,
+				5C799DAC26F03D53000FA803 /* Info.plist */,
+			);
+			path = "Wave Sketch";
+			sourceTree = "<group>";
+		};
+		5C7C4C152725E1EB00B6F78B /* FreeSketch Extra Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CADA12F26F6AA8F001222F1 /* FreeSketchViewController.swift */,
+				5CADA13926F6DEA8001222F1 /* FreeDrawVeiw.swift */,
+				5C7C4C132725E1C000B6F78B /* ErrorHandle.swift */,
+				5C7C4C162725E26B00B6F78B /* FreeSketchPickers.swift */,
+				5C7C4C182725E46C00B6F78B /* AlertPopUp.swift */,
+				5C7C4C2D272663F700B6F78B /* FreeSaveFile.swift */,
+				5C7C4C1A2725E4EA00B6F78B /* FreeSketchTextFields.swift */,
+			);
+			path = "FreeSketch Extra Files";
+			sourceTree = "<group>";
+		};
+		5C7C4C1C272619DA00B6F78B /* GuidSketch Extra Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CADA13726F6C700001222F1 /* GuidedSketchViewController.swift */,
+				5CADA13F26F816C9001222F1 /* GuidedDrawView.swift */,
+				5C7C4C2B2726608800B6F78B /* GuideSaveFile.swift */,
+				5C7C4C2927263BEA00B6F78B /* DrawingFunctions.swift */,
+				5C7C4C1D27261ACB00B6F78B /* GuideSketchPickers.swift */,
+				5C7C4C1F27261E1D00B6F78B /* GuideDrawTextFields.swift */,
+				5C7C4C252726292600B6F78B /* GuideErrorHandle.swift */,
+				5C7C4C272726296E00B6F78B /* GuideAlertPopUp.swift */,
+			);
+			path = "GuidSketch Extra Files";
+			sourceTree = "<group>";
+		};
+		5C7C4C2F2727A29400B6F78B /* ImportSketch Extra Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CADA14526F82791001222F1 /* ImportSketchViewController.swift */,
+				5CADA14126F8251E001222F1 /* ImportDrawVeiw.swift */,
+				5CE0E585272B7F0600AD523B /* DrawImportWave.swift */,
+				5C8261932744B04C008891AE /* ImportDrawTextFeild.swift */,
+				5C7C4C302727A2DE00B6F78B /* VoltageListConverter.swift */,
+				5CE0E587272B852500AD523B /* ImportSaveFile.swift */,
+				5CE0E590272C59B400AD523B /* ImportErrorHandle.swift */,
+				5CE0E589272B8EFF00AD523B /* ImportPopUp.swift */,
+				5CE0E58B272BAFAC00AD523B /* WaveInfoDisplay.swift */,
+			);
+			path = "ImportSketch Extra Files";
+			sourceTree = "<group>";
+		};
+		5CE0E58D272BB1D300AD523B /* HelpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5CE0E594272D926B00AD523B /* InputHelpTxt.txt */,
+				5CE0E598272DD73900AD523B /* FreeSketchHelpTxt.txt */,
+				5CE0E596272DCB8100AD523B /* GuideHelpTxt.txt */,
+				5CE0E59C272E314800AD523B /* ImportSketchHelpTxt.txt */,
+				5CB2C5B7271F926A0019AEA9 /* HelpViewController.swift */,
+				5CE0E592272D011E00AD523B /* HelpContentView.swift */,
+			);
+			path = HelpViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C799D9A26F03D50000FA803 /* Wave Sketch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C799DC526F03D54000FA803 /* Build configuration list for PBXNativeTarget "Wave Sketch" */;
+			buildPhases = (
+				5C799D9726F03D50000FA803 /* Sources */,
+				5C799D9826F03D50000FA803 /* Frameworks */,
+				5C799D9926F03D50000FA803 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wave Sketch";
+			productName = "Wave Sketch";
+			productReference = 5C799D9B26F03D50000FA803 /* Wave Sketch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C799DB026F03D54000FA803 /* Wave SketchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C799DC826F03D54000FA803 /* Build configuration list for PBXNativeTarget "Wave SketchTests" */;
+			buildPhases = (
+				5C799DAD26F03D54000FA803 /* Sources */,
+				5C799DAE26F03D54000FA803 /* Frameworks */,
+				5C799DAF26F03D54000FA803 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C799DB326F03D54000FA803 /* PBXTargetDependency */,
+			);
+			name = "Wave SketchTests";
+			productName = "Wave SketchTests";
+			productReference = 5C799DB126F03D54000FA803 /* Wave SketchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C799DBB26F03D54000FA803 /* Wave SketchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C799DCB26F03D54000FA803 /* Build configuration list for PBXNativeTarget "Wave SketchUITests" */;
+			buildPhases = (
+				5C799DB826F03D54000FA803 /* Sources */,
+				5C799DB926F03D54000FA803 /* Frameworks */,
+				5C799DBA26F03D54000FA803 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C799DBE26F03D54000FA803 /* PBXTargetDependency */,
+			);
+			name = "Wave SketchUITests";
+			productName = "Wave SketchUITests";
+			productReference = 5C799DBC26F03D54000FA803 /* Wave SketchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C799D9326F03D50000FA803 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5C799D9A26F03D50000FA803 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					5C799DB026F03D54000FA803 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 5C799D9A26F03D50000FA803;
+					};
+					5C799DBB26F03D54000FA803 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 5C799D9A26F03D50000FA803;
+					};
+				};
+			};
+			buildConfigurationList = 5C799D9626F03D50000FA803 /* Build configuration list for PBXProject "Wave Sketch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C799D9226F03D50000FA803;
+			productRefGroup = 5C799D9C26F03D50000FA803 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C799D9A26F03D50000FA803 /* Wave Sketch */,
+				5C799DB026F03D54000FA803 /* Wave SketchTests */,
+				5C799DBB26F03D54000FA803 /* Wave SketchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C799D9926F03D50000FA803 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE0E595272D926B00AD523B /* InputHelpTxt.txt in Resources */,
+				5CE0E59D272E314900AD523B /* ImportSketchHelpTxt.txt in Resources */,
+				5CE0E597272DCB8100AD523B /* GuideHelpTxt.txt in Resources */,
+				5CE0E599272DD73900AD523B /* FreeSketchHelpTxt.txt in Resources */,
+				5C799DAB26F03D53000FA803 /* LaunchScreen.storyboard in Resources */,
+				5C799DA826F03D53000FA803 /* Assets.xcassets in Resources */,
+				5C799DA626F03D50000FA803 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C799DAF26F03D54000FA803 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C799DBA26F03D54000FA803 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C799D9726F03D50000FA803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C8261942744B04C008891AE /* ImportDrawTextFeild.swift in Sources */,
+				5C7C4C262726292600B6F78B /* GuideErrorHandle.swift in Sources */,
+				5CE0E591272C59B400AD523B /* ImportErrorHandle.swift in Sources */,
+				5CE0E588272B852500AD523B /* ImportSaveFile.swift in Sources */,
+				5C7C4C192725E46C00B6F78B /* AlertPopUp.swift in Sources */,
+				5CE0E58C272BAFAC00AD523B /* WaveInfoDisplay.swift in Sources */,
+				5CADA13826F6C700001222F1 /* GuidedSketchViewController.swift in Sources */,
+				5CADA14626F82791001222F1 /* ImportSketchViewController.swift in Sources */,
+				5C799DA326F03D50000FA803 /* ViewController.swift in Sources */,
+				5C7C4C1E27261ACB00B6F78B /* GuideSketchPickers.swift in Sources */,
+				5C7C4C282726296E00B6F78B /* GuideAlertPopUp.swift in Sources */,
+				5C799D9F26F03D50000FA803 /* AppDelegate.swift in Sources */,
+				5CADA14226F8251E001222F1 /* ImportDrawVeiw.swift in Sources */,
+				5CE0E58A272B8EFF00AD523B /* ImportPopUp.swift in Sources */,
+				5CADA13026F6AA8F001222F1 /* FreeSketchViewController.swift in Sources */,
+				5C7C4C1B2725E4EA00B6F78B /* FreeSketchTextFields.swift in Sources */,
+				5CE0E593272D011E00AD523B /* HelpContentView.swift in Sources */,
+				5C7C4C2C2726608800B6F78B /* GuideSaveFile.swift in Sources */,
+				5C7C4C2E272663F700B6F78B /* FreeSaveFile.swift in Sources */,
+				5CE0E586272B7F0600AD523B /* DrawImportWave.swift in Sources */,
+				5C7C4C312727A2DE00B6F78B /* VoltageListConverter.swift in Sources */,
+				5C8261962744C54F008891AE /* ConnectAWGViewController.swift in Sources */,
+				5C7C4C142725E1C000B6F78B /* ErrorHandle.swift in Sources */,
+				5C7C4C172725E26B00B6F78B /* FreeSketchPickers.swift in Sources */,
+				5CADA13A26F6DEA8001222F1 /* FreeDrawVeiw.swift in Sources */,
+				5C7C4C2027261E1D00B6F78B /* GuideDrawTextFields.swift in Sources */,
+				5C799DA126F03D50000FA803 /* SceneDelegate.swift in Sources */,
+				5C7C4C2A27263BEA00B6F78B /* DrawingFunctions.swift in Sources */,
+				5CADA14026F816C9001222F1 /* GuidedDrawView.swift in Sources */,
+				5CB2C5B8271F926A0019AEA9 /* HelpViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C799DAD26F03D54000FA803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C799DB826F03D54000FA803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C799DB326F03D54000FA803 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C799D9A26F03D50000FA803 /* Wave Sketch */;
+			targetProxy = 5C799DB226F03D54000FA803 /* PBXContainerItemProxy */;
+		};
+		5C799DBE26F03D54000FA803 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C799D9A26F03D50000FA803 /* Wave Sketch */;
+			targetProxy = 5C799DBD26F03D54000FA803 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C799DA426F03D50000FA803 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C799DA526F03D50000FA803 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C799DA926F03D53000FA803 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C799DAA26F03D53000FA803 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C799DC326F03D54000FA803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C799DC426F03D54000FA803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C799DC626F03D54000FA803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YM777GP2M;
+				INFOPLIST_FILE = "Wave Sketch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Texas-A-M.Wave-Sketch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5C799DC726F03D54000FA803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YM777GP2M;
+				INFOPLIST_FILE = "Wave Sketch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Texas-A-M.Wave-Sketch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5C799DC926F03D54000FA803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Wave SketchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Texas-A-M.Wave-SketchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wave Sketch.app/Wave Sketch";
+			};
+			name = Debug;
+		};
+		5C799DCA26F03D54000FA803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Wave SketchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Texas-A-M.Wave-SketchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wave Sketch.app/Wave Sketch";
+			};
+			name = Release;
+		};
+		5C799DCC26F03D54000FA803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Wave SketchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Texas-A-M.Wave-SketchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wave Sketch";
+			};
+			name = Debug;
+		};
+		5C799DCD26F03D54000FA803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Wave SketchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Texas-A-M.Wave-SketchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wave Sketch";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C799D9626F03D50000FA803 /* Build configuration list for PBXProject "Wave Sketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C799DC326F03D54000FA803 /* Debug */,
+				5C799DC426F03D54000FA803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C799DC526F03D54000FA803 /* Build configuration list for PBXNativeTarget "Wave Sketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C799DC626F03D54000FA803 /* Debug */,
+				5C799DC726F03D54000FA803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C799DC826F03D54000FA803 /* Build configuration list for PBXNativeTarget "Wave SketchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C799DC926F03D54000FA803 /* Debug */,
+				5C799DCA26F03D54000FA803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C799DCB26F03D54000FA803 /* Build configuration list for PBXNativeTarget "Wave SketchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C799DCC26F03D54000FA803 /* Debug */,
+				5C799DCD26F03D54000FA803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C799D9326F03D50000FA803 /* Project object */;
+}

@@ -1,0 +1,79 @@
+Wave Types
+
+  : Square Wave - is a wave that has a high
+    voltage value for half of it's period
+    and then a low voltage value for the
+    other half of the period. WaveSketch
+    requires a 10 mV difference between the
+    high and low voltage values chosen.
+
+  : Triangle Wave - is a wave that has a
+    positive ramp up and down triangle look
+    for the first half of the period and then
+    has a negative ramp down and up triangle
+    look in the second half of the other half.
+    WaveSketch requires a 10 mV difference
+    between the Max and Min voltages.
+
+  : Sawtooth Wave - is a wave that ramps up
+    the entire period than immediately goes down
+    at the end of the period. WaveSketch requires
+    a 10 mV difference between the Max and Min
+    voltages.
+
+  : Trapezoidal Wave - is a wave that ramps up,
+    then has a flat section, and ramps down in the
+    first half of the period. In the second half of
+    period the wave ramps down, has a flat section,
+    then ramps back up. WaveSketch requires a
+    10 mV difference between the Max and Min
+    voltages.
+
+  : DC Wave - is a mimic of a DC Voltage.
+    It stays at the same voltage the entire period.
+    The entered Max & Min voltages must be equal.
+    This is the only wave that WaveSketch allows the
+    Max and Min Voltage to be the same.
+
+  : Sinusoidal Wave - is a upside down parabola
+    ramping up then down for the first half of
+    the period, and then a parabola ramping down
+    then up for the second half of the period.
+    WaveSketch requires a 10 mV difference
+    between the Max & Min voltages.
+
+Saving GuideSketch Waves
+
+  : Save Button - To correctly save a GuideSketch
+    wave, all of the wave inputs and units must
+    be inputed, all values and units must be in
+    the supported ranges, and a wave must be
+    selected to save. If something is missing
+    an Error alert will show the missing
+    information.
+
+  : Wave File Name - The user can choose to input
+    a customized name inside of the file name input
+    box or opt out by just pressing save. The app
+    will always save your wave with the type of
+    WaveSketch and an unique identifier attached
+    to the end of the name.
+  
+  : File Location - All of the files saved from
+    app will be saved into a WavesSketch File
+    located in your files app. To access them,
+    starting from the home screen, tap the file
+    app. Then select "On My iPhone" under the
+    location tab. A screen of files will appear
+    and select the WaveSketch File. All of
+    the saved wave files are located here.
+    
+Clearing Drawing / Inputs
+
+  : To clear a selected wave drawing press
+    the clear button at the top left of the
+    screen. To clear the input data and reset
+    the units double tap the clear button at
+    the top left of the screen.
+    
+    

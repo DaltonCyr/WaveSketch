@@ -1,0 +1,55 @@
+Importing file
+
+  : Importing a wave file - tap the "Select File"
+    button and your iPhone's file app will appear.
+    The app prevents the importation of non .txt
+    files, thus only the files highlighted are
+    able to be imported. Just tap the file you
+    want to import.
+
+  : Display of File - After importing a file
+    the app will give a centralized view of
+    the wave in the dark grey wave display
+    in the middle of the screen. The wave 
+    properties will be displayed above the
+    drawing.
+
+  : File Read Error - if there are any issues
+    with the file, an Error Alert will display
+    informing you about the files specific
+    issues. You cannot save a wave if the
+    file has read issues.
+
+
+
+Saving FreeSketch Waves
+
+  : Save Button - To correctly save a FreeSketch
+    wave, all of the wave inputs and units must
+    be inputed, all values and units must be in
+    the supported ranges, and a wave must be
+    hand drawn to save. If something is missing
+    an Error alert will show the missing
+    information.
+
+  : Wave File Name - The user can choose to input
+    a customized name inside of the file name input
+    box or opt out by just pressing save. The app
+    will always save your wave with the type of
+    WaveSketch and an unique identifier attached
+    to the end of the name.
+
+  : File Location - All of the files saved from
+    app will be saved into a WavesSketch File
+    located in your files app. To access them,
+    starting from the home screen, tap the file
+    app. Then select "On My iPhone" under the
+    location tab. A screen of files will appear
+    and select the WaveSketch File. All of
+    the saved wave files are located here.
+
+Clearing Drawing / Inputs
+
+  : To clear a selected wave drawing press
+    the clear button at the top left of the
+    screen.
