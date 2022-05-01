@@ -209,13 +209,10 @@ extension ImportSketchViewController {
             }
         }
         
-        if channelDeclarationError > 0 {
-            compundingMessage += "Error With Channel Declaration \n"
-            continueChecking += 1
-        }
+
         
-        if voltageArray.count != 65536 {
-            compundingMessage += "Missing \(65536 - voltageArray.count) Data Values"
+        if voltageArray.count != 15360 {
+            compundingMessage += "Missing \(15360 - voltageArray.count) Data Values"
             continueChecking += 1
         }
         

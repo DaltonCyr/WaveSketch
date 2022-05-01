@@ -23,10 +23,10 @@ extension ImportSketchViewController {
         HeaderData.remove(at: 0)
         
        
-        if HeaderData[8] == "CH 1 "{
+        if HeaderData[8] == "BNC Port 1 "{
             channelNumber = 1
         }
-        if HeaderData[8] == "CH 2 "{
+        if HeaderData[8] == "BNC Port 2 "{
             channelNumber = 2
         }
         

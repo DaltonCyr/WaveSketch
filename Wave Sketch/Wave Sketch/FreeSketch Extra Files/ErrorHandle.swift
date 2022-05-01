@@ -58,22 +58,22 @@ extension FreeSketchViewController {
         
         var maxVoltage = (HeaderInformation[0] as NSString).doubleValue
         print(maxVoltage)
-        if maxVoltage > 5 && (HeaderInformation[1] == "V" || HeaderInformation[1] == "- V") {
+        if maxVoltage > 4 && (HeaderInformation[1] == "V" || HeaderInformation[1] == "- V") {
             if HeaderInformation[1] == "V" {
-                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max 5V)"
+                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max 4V)"
                 return (false, errorMessage)
             } else{
-                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max -5V)"
+                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max -4V)"
                 return (false, errorMessage)
             }
             
         }
-        if maxVoltage > 5000 && (HeaderInformation[1] == "mV" || HeaderInformation[1] == "- mV") {
+        if maxVoltage > 4000 && (HeaderInformation[1] == "mV" || HeaderInformation[1] == "- mV") {
             if HeaderInformation[1] == "mV" {
-                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max 5000mV)"
+                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max 4000mV)"
                 return (false, errorMessage)
             } else{
-                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max -5000mV)"
+                errorMessage = "Max Voltage Out Of Range For Selected Unit (Max -4000mV)"
                 return (false, errorMessage)
             }
             
@@ -82,17 +82,17 @@ extension FreeSketchViewController {
     
     //MARK: - Error Checking Min Voltage Unit With Values
         var minVoltage = (HeaderInformation[2] as NSString).doubleValue
-        if minVoltage > 5 && (HeaderInformation[3] == "V" || HeaderInformation[3] == "- V") {
+        if minVoltage > 4 && (HeaderInformation[3] == "V" || HeaderInformation[3] == "- V") {
             if HeaderInformation[3] == "V" {
-                errorMessage = "Min Voltage Out Of Range For Selected Unit (Max 5V)"
+                errorMessage = "Min Voltage Out Of Range For Selected Unit (Max 4V)"
                 return (false, errorMessage)
             } else{
-                errorMessage = "Min Voltage Out Of Range For Selected Unit (Max -5V)"
+                errorMessage = "Min Voltage Out Of Range For Selected Unit (Max -4V)"
                 return (false, errorMessage)
             }
             
         }
-        if minVoltage > 5000 && (HeaderInformation[3] == "mV" || HeaderInformation[3] == "- mV") {
+        if minVoltage > 4000 && (HeaderInformation[3] == "mV" || HeaderInformation[3] == "- mV") {
             if HeaderInformation[3] == "mV" {
                 errorMessage = "Min Voltage Out Of Range For Selected Unit (Max 5000mV)"
                 return (false, errorMessage)
@@ -188,7 +188,7 @@ extension FreeSketchViewController {
         var frequency = (HeaderInformation[4] as NSString).doubleValue
         let shift = (HeaderInformation[6] as NSString).doubleValue
         
-        if HeaderInformation[5] == "kHZ" {
+        if HeaderInformation[5] == "KHZ" {
             frequency = frequency * 1000
             if frequency > 100000 {
                 errorMessage = "Frequency Out Of Range (Max 100kHz)"
@@ -203,7 +203,7 @@ extension FreeSketchViewController {
         
         if HeaderInformation[5] == "HZ" {
             if frequency > 100000 {
-                errorMessage = "Frequency Out Of Range \n (Max 100,000 HZ)"
+                errorMessage = "Frequency Out Of Range \n (Max 100000 HZ)"
                 return (false, errorMessage)
             }
             if frequencyValue < 1 {

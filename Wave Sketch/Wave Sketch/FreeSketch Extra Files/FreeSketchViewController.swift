@@ -21,6 +21,12 @@ class FreeSketchViewController: UIViewController {
     @IBOutlet weak var SaveWaveButton: UIButton!
     @IBOutlet var ClearFreeSketchButton: UIButton!
     @IBOutlet var FixDrawing: UIButton!
+    
+    //MARK: Menu Button Outlets
+    @IBOutlet weak var maxVoltageUnitMenu: UIButton!
+    @IBOutlet weak var minVoltageUnitMenu: UIButton!
+    @IBOutlet weak var frequencyUnitMenu: UIButton!
+    @IBOutlet weak var outputChannelMenu: UIButton!
 
     //MARK: Text Feild Declarations
     @IBOutlet weak var MaxVoltage: UITextField!
@@ -30,47 +36,23 @@ class FreeSketchViewController: UIViewController {
     @IBOutlet weak var FileName: UITextField!
     var currentTextFeildTag = -1
     
-    //MARK: - Picker View Declarations
-    ///Max Voltage Unit Picker
-    @IBOutlet weak var VoltageUnit1: UIPickerView!
-    var maxVoltageUnit = ""
-    @IBOutlet weak var VoltageUnit2: UIPickerView!
-    var minVoltageUnit = ""
-    var voltageUnit = ["Volt Unit", "mV", "V", "- mV", "- V"]
-
-    @IBOutlet weak var FrequencyUnit: UIPickerView!
-    var frequencyUnit = ["Freq Unit","HZ","kHZ"]
-
-    @IBOutlet weak var ShiftDirection: UIPickerView!
-    var shiftOptions = ["Shift","N/A", "Left", "Right"]
-
-    @IBOutlet weak var Channel: UIPickerView!
-    var channelOptions = ["Port","CH 1", "CH 2"]
     
-    var headerInformation = ["Max V","Max Unit","Min V","Min Unit","Freq","Freq Unit","Shift","Direction","Channel"]
+    var headerInformation = ["Max V","V","Min V","- V","Frequency","HZ","0","N/A","BNC Port 1"]
     
     //MARK:Loading View
     override func viewDidLoad() {
         super.viewDidLoad()
         
       
-        // MARK:Loading All Picker Views
-        VoltageUnit1.delegate = self
-        VoltageUnit1.dataSource = self
-        VoltageUnit2.delegate = self
-        VoltageUnit2.dataSource = self
-        FrequencyUnit.delegate = self
-        FrequencyUnit.dataSource = self
-        ShiftDirection.delegate = self
-        ShiftDirection.dataSource = self
-        Channel.delegate = self
-        Channel.dataSource = self
-        
+        // MARK:Loading All Menu Buttons
+        frequencyMenu()
+        minVoltageMenu()
+        maxVoltageMenu()
+        channelMenu()
         //MARK:Loading All Text Fields
         MaxVoltage.delegate = self
         MinVoltage.delegate = self
         Frequency.delegate = self
-        Phase.delegate = self
         FileName.delegate = self
         
       
@@ -129,22 +111,16 @@ class FreeSketchViewController: UIViewController {
 
     @IBAction func tapClearFreeSketchButton(){
         print("Clear pressed")
-        
+        freeDrawView.trackedBackwardsDraw = false
         if freeDrawView.linePoint.count == 0 {
          
         //MARK: Sets All Text Feilds to Blank
         MaxVoltage.text = ""
         MinVoltage.text = ""
         Frequency.text = ""
-        Phase.text = ""
-        FileName.text = ""
         
-        //MARK: Set Pickers To Default
-        VoltageUnit1.selectRow(0, inComponent: 0, animated: true)
-        VoltageUnit2.selectRow(0, inComponent: 0, animated: true)
-        FrequencyUnit.selectRow(0, inComponent: 0, animated: true)
-        ShiftDirection.selectRow(0, inComponent: 0, animated: true)
-        Channel.selectRow(0, inComponent: 0, animated: true)
+        FileName.text = ""
+    
         }
         
         //MARK: Remove Drawing
@@ -157,7 +133,7 @@ class FreeSketchViewController: UIViewController {
 
     @IBAction func tapFixDrawingButton(){
         print(" Contiue Drawing")
-        
+        freeDrawView.trackedBackwardsDraw = false
         if freeDrawView.linePoint.count >= 1 {
             freeDrawView.linePoint.remove(at: freeDrawView.linePoint.count-1)
             freeDrawView.nonLine.remove(at: freeDrawView.nonLine.count-1)

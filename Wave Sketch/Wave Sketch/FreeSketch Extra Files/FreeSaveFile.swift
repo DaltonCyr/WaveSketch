@@ -17,34 +17,32 @@ extension FreeSketchViewController {
     
     // MARK: - Getting Values in Text Fields
     let drawingPoints = freeDrawView.linePoint
-            
+    
     let maxVoltageText = MaxVoltage.text
     let minVoltageText = MinVoltage.text
     let frequencyValue = Frequency.text
-    let shiftDegrees = Phase.text
+    let shiftDegrees = "0"
     
     // This is for error Handle
     headerInformation[0] = maxVoltageText ?? "No Max Voltage"
     headerInformation[2] = minVoltageText ?? "No Min Voltage"
     headerInformation[4] = frequencyValue ?? "No Frequency Value"
-    headerInformation[6] = shiftDegrees ?? "No Shift Value"
+    headerInformation[6] = shiftDegrees
     
     var maxVoltage = (headerInformation [0] as NSString).doubleValue
     let maxVoltageSign = headerInformation [1]
     var minVoltage = (headerInformation [2] as NSString).doubleValue
     let minVoltageSign = headerInformation [3]
     var channelNumber = 0
-        if headerInformation[8] == "CH 1"{
+        if headerInformation[8] == "BNC Port 1"{
             channelNumber = 1
         }
-        if headerInformation[8] == "CH 2"{
+        if headerInformation[8] == "BNC Port 1"{
             channelNumber = 2
         }
 
 
-    var numOfPointsPerSection = [Float]()
-    var sectionLengthList = [Float]()
-    var percentageList = [Float]()
+    
     
     // MARK: - Max Voltage Sign
     switch maxVoltageSign {
@@ -97,101 +95,135 @@ extension FreeSketchViewController {
     // MARK: - Defining The Percentages and Points per Section
     if shouldSaveWave == true {
         
-        print(freeDrawView.linePoint)
-        
-        for i in 0...freeDrawView.linePoint.count-1{
-            print("\(freeDrawView.linePoint[i].x) , \(freeDrawView.linePoint[i].y)" )        }
-        
     
-        let xAxisSlots = 65536
-        let totalLengthOfDraw = Float(drawingPoints[drawingPoints.count - 1].x - drawingPoints[0].x)
-        let singlePointPercentage: Float = 100 / Float(xAxisSlots)
-        let percentageLeftToBeFilled = (Float(xAxisSlots) - Float(drawingPoints.count)) * singlePointPercentage
+        let X_AXIS_POINTS = 15360
+        // Need to determine the number of sections this wave has
+                    ///Number of sections is fingerPoints.count -1
 
-        //Filling The Legth List with length between the Drawn Points
-        for i in 0...drawingPoints.count - 2 {
-            let lengthBetweenTwoPoints = abs(Float(drawingPoints[i + 1].x - drawingPoints[i].x))
+        let numberOfSectionsToFill = drawingPoints.count-1
+
+
+        //Need to Determine the percentage of the points that fill each section
+        ///Total Wave Distance = fingerPoint[fingerPoint.count-1] - fingerPoint[0]
+        ///use the total distace to come up with a percentage for each section
+
+        let totalWaveDistance = drawingPoints[drawingPoints.count-1].x - drawingPoints[0].x
+        var percentagePerSectionList = [Double]()
+        for i in 0...drawingPoints.count-2{
             
-            sectionLengthList.append(lengthBetweenTwoPoints)
-            }
+            let sectionDistance = drawingPoints[i+1].x - drawingPoints[i].x
+            percentagePerSectionList.append(sectionDistance / totalWaveDistance)
+        }
 
-        //Filling The Percentage List to determine how much percentage each section gets of the avaliable points
-        for i in 0...sectionLengthList.count-1 {
-            let percentageRatioOfLength = (sectionLengthList[i] / totalLengthOfDraw) * percentageLeftToBeFilled
-            percentageList.append(percentageRatioOfLength)
-            }
-        //print(numOfPointsPerSection)
+        //Percentage points per section will not divide evenly thus must round and insert more in the larger percetage sections
 
-        // Modulating percentages to round up or down to nearest point
-        for i in 0...percentageList.count-1 {
-            let numOfPoints = Int(percentageList[i] / singlePointPercentage)
-            numOfPointsPerSection.append(Float(numOfPoints))
+        var exactPointsPerSectionList = [Double]()
+
+        for i in 0...percentagePerSectionList.count-1{
+            
+            let percentage = percentagePerSectionList[i]
+            exactPointsPerSectionList.append(percentage * (Double(X_AXIS_POINTS) - Double(drawingPoints.count)))
             
         }
-        
-         
 
-        // MARK: - Fixing Number of Points
-
-
-        var pointCountCheck = 0
-        for i in 0...numOfPointsPerSection.count-1 {
-            pointCountCheck = pointCountCheck + Int(numOfPointsPerSection[i])
-
+        //All Points are rounded down so we stay below the x axis limit
+        var roundedDownPointsPerSectionList = [Int]()
+        var remainingPointsLeft  = X_AXIS_POINTS - drawingPoints.count
+        for i in 0...exactPointsPerSectionList.count-1{
+            
+            let exactPointsValue = exactPointsPerSectionList[i]
+            let roundedPointsValue = exactPointsValue.rounded(.down)
+            remainingPointsLeft = remainingPointsLeft - Int(roundedPointsValue)
+            roundedDownPointsPerSectionList.append(Int(roundedPointsValue))
+            
+            
         }
-        pointCountCheck = pointCountCheck + drawingPoints.count
+
         
-        var lowestValueIndex = 0
-        var copyOfPercentageList = percentageList
-        var lowestPercentage = copyOfPercentageList[0]
-        
-        // MARK: - Not Enough Points
+        //Need to distrubute the extra points that we have due to the rounding down
+        ///Sections with the larger percentages will get more points
+
+        var extraPointsPerSectionListDependentOnSectionLength = [Double]()
+
+        for i in 0...numberOfSectionsToFill-1{
             
-        //Will Always be not enough points because always rounded down percentages
-        while(pointCountCheck < xAxisSlots) {
+            let percentageOfRemaingPointsToBeInserted = percentagePerSectionList[i] * Double(remainingPointsLeft)
+            extraPointsPerSectionListDependentOnSectionLength.append(percentageOfRemaingPointsToBeInserted)
             
-            for i in 0...copyOfPercentageList.count-1 {
-                if copyOfPercentageList[i] < lowestPercentage {
-                    lowestValueIndex = i
+            
+        }
+
+        //Need to sort the list from largest to smallest so larger sections get extra points first
+        let sortedListFromGreatestToLeastOfExtraPointsPerSection = extraPointsPerSectionListDependentOnSectionLength.sorted(by: >)
+
+        while(Int(remainingPointsLeft) > 0){
+            for i in 0...extraPointsPerSectionListDependentOnSectionLength.count-1{
+                
+
+                let currentLargestSectionToGetExtraPoints = sortedListFromGreatestToLeastOfExtraPointsPerSection[i]
+                if Int(remainingPointsLeft) > 0 {
+                    for j in 0...extraPointsPerSectionListDependentOnSectionLength.count-1{ ///This for loop is matching the index with the current largest selected section to be able to add a point to its count
+                        if currentLargestSectionToGetExtraPoints == extraPointsPerSectionListDependentOnSectionLength[j]{
+                            roundedDownPointsPerSectionList[j] = roundedDownPointsPerSectionList[j] + 1
+                            break
+                        }
+                        
+                    }
+                remainingPointsLeft -= 1
+                
                 }
             }
+        }
+        var sum1 = 0
+        print("SUM 1 is ")
+        for i in 0...roundedDownPointsPerSectionList.count-1{
+            sum1 = sum1 + roundedDownPointsPerSectionList[i]
+        
+        }
+        print(sum1)
+        print(drawingPoints.count)
+        print(sum1 + drawingPoints.count)
+
+
+// MARK: - Filling The points between drawn points with values
+        var alteredDrawingPoint = [CGPoint]()
+        alteredDrawingPoint.append(drawingPoints[0])
+        for i in 0...drawingPoints.count-2{
             
-            numOfPointsPerSection[lowestValueIndex] = numOfPointsPerSection[lowestValueIndex] + 1
-            pointCountCheck = pointCountCheck + 1
+            //Find the length between the two points
+            let sectionDistanceX = Double(drawingPoints[i+1].x - drawingPoints[i].x)
+            let sectionDistanceY = Double(drawingPoints[i+1].y - drawingPoints[i].y)
             
-            //Stopping the array from being out of bounds
-            if copyOfPercentageList.count < lowestValueIndex {
-                copyOfPercentageList = percentageList
+            //Find Increment Lengths for points to be equal distance from eachother
+            let distanceBetweenInsertedPoints = sectionDistanceX / (Double(roundedDownPointsPerSectionList[i]) + 1)
+            
+            //Find Slope
+            let slope = sectionDistanceY / (sectionDistanceX + 0.0000001)
+            
+            //Find Y axis Crossing
+            let yAxisCrossing = drawingPoints[i].y - (slope * drawingPoints[i].x)
+            
+            //Insert Points for this specific section, iterate for the number of points in that section
+            for j in 0...roundedDownPointsPerSectionList[i] {
+                let currentInsertedPointXLocation = (drawingPoints[i].x) + (Double(j) * distanceBetweenInsertedPoints + distanceBetweenInsertedPoints)
+                
+                let currentInsertedPointYLocation = (slope * currentInsertedPointXLocation) + yAxisCrossing
+               
+                let truncatedXPointLocation = round(currentInsertedPointXLocation * 10000) / 10000
+                
+                let truncatedYPointLocation = round(currentInsertedPointYLocation * 10000) / 10000
+                
+                alteredDrawingPoint.append(CGPoint(x: truncatedXPointLocation, y: truncatedYPointLocation))
             }
-            //Removing the sections that have already had points removed
-            else {
-            copyOfPercentageList.remove(at: lowestValueIndex)
-            }
-            lowestPercentage = copyOfPercentageList[0]
+            
             
         }
-
-
-        // MARK: - Filling The points between drawn points with values
-        var alteredDrawnPoints = [CGPoint] ()
-        alteredDrawnPoints.append(CGPoint(x: drawingPoints[0].x, y: drawingPoints[0].y))
-        for i in 0...numOfPointsPerSection.count-1 {
-            
-            
-            
-            let slopeOfTwoPoints = Float(drawingPoints[i+1].y - drawingPoints[i].y) / (Float(drawingPoints[i+1].x - drawingPoints[i].x) + 0.00001)
-            let xIncrement = Float(drawingPoints[i+1].x - drawingPoints[i].x) / (numOfPointsPerSection[i] + 1)
-            let yIncrement = slopeOfTwoPoints * xIncrement
-            let numberOfPoints = Int(numOfPointsPerSection[i])
+//        print("Altered Drawing Points Printed = \(alteredDrawingPoint.count)")
+//        for i in 0...alteredDrawingPoint.count-1{
+//            print(alteredDrawingPoint[i].y * -1)
+//        }
            
-            // MARK: - Truncating
-            for _ in 0...numberOfPoints {
-                ///Truncating the X and Y values decrease size of the file
-                let xValue = floor(round((alteredDrawnPoints[alteredDrawnPoints.count-1].x + CGFloat(xIncrement)) * 10000)) / 10000
-                let yValue = floor(round((alteredDrawnPoints[alteredDrawnPoints.count-1].y + CGFloat(yIncrement)) * 10000)) / 10000
-                alteredDrawnPoints.append(CGPoint(x: xValue, y: yValue))
-            }
-        }
+        
         
         // MARK: - Change points to (CH,X,V)
         ///Getting Data Input
@@ -199,13 +231,13 @@ extension FreeSketchViewController {
         //Finding Max Voltage iPhone point and Min voltage iPhone point and Ranges
         var maxVoltage_yPoint:CGFloat = 1000
         var minVoltage_yPoint:CGFloat = -1
-        for i in 0...alteredDrawnPoints.count - 1 {
+        for i in 0...alteredDrawingPoint.count - 1 {
             ///inverted due to the iphone graph being top y=0 bottom y= 800
-            if alteredDrawnPoints[i].y > minVoltage_yPoint {
-                minVoltage_yPoint = alteredDrawnPoints[i].y
+            if alteredDrawingPoint[i].y > minVoltage_yPoint {
+                minVoltage_yPoint = alteredDrawingPoint[i].y
             }
-            if alteredDrawnPoints[i].y < maxVoltage_yPoint {
-                maxVoltage_yPoint = alteredDrawnPoints[i].y
+            if alteredDrawingPoint[i].y < maxVoltage_yPoint {
+                maxVoltage_yPoint = alteredDrawingPoint[i].y
             }
             
         }
@@ -216,12 +248,12 @@ extension FreeSketchViewController {
         let voltageRange = CGFloat(maxVoltage - minVoltage)
        
         // MARK: - Y to Voltage
-        for i in 0...alteredDrawnPoints.count-1 {
+        for i in 0...alteredDrawingPoint.count-1 {
             
-            let voltageRatio = ((minVoltage_yPoint - alteredDrawnPoints[i].y) / point_yRange) * voltageRange
+            let voltageRatio = ((minVoltage_yPoint - alteredDrawingPoint[i].y) / point_yRange) * voltageRange
                         
-            alteredDrawnPoints[i] = CGPoint(x: CGFloat(i), y: round((CGFloat(minVoltage) + voltageRatio) * 10000) / 10000)
-           // print(alteredDrawnPoints[i])
+            alteredDrawingPoint[i] = CGPoint(x: CGFloat(i), y: round((CGFloat(minVoltage) + voltageRatio) * 10000) / 10000)
+            print(alteredDrawingPoint[i].y)
         }
 
         
@@ -241,9 +273,9 @@ extension FreeSketchViewController {
                 
             contenets = contenets + "$\n"
         
-        for i in 0...alteredDrawnPoints.count-1 {
-            let intVersionX = Int(alteredDrawnPoints[i].x)
-            contenets = contenets + ":\(channelNumber):\(intVersionX):\(alteredDrawnPoints[i].y) \n"
+        for i in 0...alteredDrawingPoint.count-1 {
+            let intVersionX = Int(alteredDrawingPoint[i].x)
+            contenets = contenets + ":\(channelNumber):\(intVersionX):\(alteredDrawingPoint[i].y) \n"
         }
         
         // MARK: - File Directory
@@ -262,24 +294,26 @@ extension FreeSketchViewController {
         }
             
         showAlert(passedTitle: "Complete", passedMessage: errorMessage)
-            print(alteredDrawnPoints.count)
+            print(alteredDrawingPoint.count)
+        }
+        else{
+            showAlert(passedTitle: "Error", passedMessage: errorMessage)
+            print("DIDNT SAVE WAVE")
+        }
+        
     }
-    else{
-        showAlert(passedTitle: "Error", passedMessage: errorMessage)
-        print("DIDNT SAVE WAVE")
+    // MARK: - End Save Button
+
+
+
+    // MARK: - File Name Definition
+    func chooseWaveFileName() -> String {
+        let chosenFileName = FileName.text ?? "FreeSketch"
+        print(chosenFileName)
+        return chosenFileName
     }
+
     
 }
-// MARK: - End Save Button
 
-
-
-// MARK: - File Name Definition
-func chooseWaveFileName() -> String {
-    let chosenFileName = FileName.text ?? "FreeSketch"
-    print(chosenFileName)
-    return chosenFileName
-}
-
-}
 

@@ -18,8 +18,15 @@ class GuidedSketchViewController: UIViewController {
     
     @IBOutlet var guideDrawView: GuidedDrawView!
     
+    //MARK: Menu Button Outlets
+    @IBOutlet weak var maxVoltageUnitMenu: UIButton!
+    @IBOutlet weak var minVoltageUnitMenu: UIButton!
+    @IBOutlet weak var frequencyUnitMenu: UIButton!
+    @IBOutlet weak var outputChannelMenu: UIButton!
     
-    //MARK: Button Outlets
+    
+    
+    //MARK: Draw Button Outlets
     
     @IBOutlet weak var SquareWaveButton: UIButton!
     @IBOutlet weak var TriangleWaveButton: UIButton!
@@ -35,53 +42,33 @@ class GuidedSketchViewController: UIViewController {
     @IBOutlet weak var MaxVoltage: UITextField!
     @IBOutlet weak var MinVoltage: UITextField!
     @IBOutlet weak var Frequency: UITextField!
-    @IBOutlet weak var Phase: UITextField!
     @IBOutlet weak var FileName: UITextField!
     
     var currentTextFeildTag = -1
-    //MARK: - Picker View Declarations
-    ///Max Voltage Unit Picker
-    @IBOutlet weak var VoltageUnit1: UIPickerView!
-    var maxVoltageUnit = ""
-    ///Min Voltage Unit Picker
-    @IBOutlet weak var VoltageUnit2: UIPickerView!
-    var minVoltageUnit = ""
-    var voltageUnit = ["Volt Unit", "mV", "V", "- mV", "- V"]
-    ///Frequency Unit Picker
-    @IBOutlet weak var FrequencyUnit: UIPickerView!
-    var frequencyUnit = ["Freq Unit","HZ","kHZ"]
-    ///Shift Unit Picker
-    @IBOutlet weak var ShiftDirection: UIPickerView!
-    var shiftOptions = ["Shift","N/A", "Left", "Right"]
-    ///Channel Picker
-    @IBOutlet weak var Channel: UIPickerView!
-    var channelOptions = ["Port","CH 1", "CH 2"]
+  
     
     ///Header Informtion For File and Error Handle
-    var headerInformation = ["Max V","Max Unit","Min V","Min Unit","Freq","Freq Unit","Shift","Direction","Channel"]
+    var headerInformation = ["Max V","V","Min V","- V","Frequency","HZ","0","N/A","BNC Port 1"]
     
     
     //MARK: - Loading ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Loading All Picker Views
-        VoltageUnit1.delegate = self
-        VoltageUnit1.dataSource = self
-        VoltageUnit2.delegate = self
-        VoltageUnit2.dataSource = self
-        FrequencyUnit.delegate = self
-        FrequencyUnit.dataSource = self
-        ShiftDirection.delegate = self
-        ShiftDirection.dataSource = self
-        Channel.delegate = self
-        Channel.dataSource = self
+        //Loading All Menu Views
+        
+        frequencyMenu()
+        minVoltageMenu()
+        maxVoltageMenu()
+        channelMenu()
+        
+        
         
         //Loading All Text Fields
         MaxVoltage.delegate = self
         MinVoltage.delegate = self
         Frequency.delegate = self
-        Phase.delegate = self
+        
         FileName.delegate = self
         
         //Loading GuideDraw View
@@ -96,7 +83,10 @@ class GuidedSketchViewController: UIViewController {
         
     }
     
-    //MARK: - Moving Text View When Keyboar Up
+    
+
+    
+    //MARK: - Moving Text View When Keyboard Up
     @objc func keyboardWillShow(notification: NSNotification){
         
         if currentTextFeildTag == 4 {
@@ -217,13 +207,13 @@ class GuidedSketchViewController: UIViewController {
         let maxVoltageText = MaxVoltage.text
         let minVoltageText = MinVoltage.text
         let frequencyValue = Frequency.text
-        let shiftDegrees = Phase.text
+        let shiftDegrees = "0"
         
         // Updating Header Information - HeaderInformation 1,3,5,7,8 are updated within the picker functions
         headerInformation[0] = maxVoltageText ?? "No Max Voltage"
         headerInformation[2] = minVoltageText ?? "No Min Voltage"
         headerInformation[4] = frequencyValue ?? "No Frequency Value"
-        headerInformation[6] = shiftDegrees ?? "No Shift Value"
+        headerInformation[6] = shiftDegrees
         
         (shouldSaveWave, errorMessage) = ErrorFinder(HeaderInformation: headerInformation)
         
@@ -245,14 +235,10 @@ class GuidedSketchViewController: UIViewController {
         MaxVoltage.text = ""
         MinVoltage.text = ""
         Frequency.text = ""
-        Phase.text = ""
+        
         
         //MARK: Set Pickers To Default
-        VoltageUnit1.selectRow(0, inComponent: 0, animated: true)
-        VoltageUnit2.selectRow(0, inComponent: 0, animated: true)
-        FrequencyUnit.selectRow(0, inComponent: 0, animated: true)
-        ShiftDirection.selectRow(0, inComponent: 0, animated: true)
-        Channel.selectRow(0, inComponent: 0, animated: true)
+
         }
         
         //MARK: Remove Wave Drawing

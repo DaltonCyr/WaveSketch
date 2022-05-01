@@ -16,7 +16,7 @@ extension GuidedSketchViewController: UITextFieldDelegate {
         MaxVoltage.resignFirstResponder()
         MinVoltage.resignFirstResponder()
         Frequency.resignFirstResponder()
-        Phase.resignFirstResponder()
+        
         FileName.resignFirstResponder()
 
     }

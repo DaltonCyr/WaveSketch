@@ -108,7 +108,7 @@ extension ImportSketchViewController {
                 continueChecking += 0
                 
                 
-            case "kHZ ":
+            case "KHZ ":
                 continueChecking += 0
                 frequencyValue *= 1000
             default:
@@ -149,9 +149,9 @@ extension ImportSketchViewController {
             
             //MARK: Check Channel
             switch HeaderInformation[8] {
-            case "CH 1 ":
+            case "BNC Port 1 ":
                 continueChecking += 0
-            case "CH 2 ":
+            case "BNC Port 2 ":
                 continueChecking += 0
                 
             default:
@@ -160,9 +160,9 @@ extension ImportSketchViewController {
             }
             
             //MARK: Check Number of Inputs
-            if pointCount != 65536 && pointCount != -1 {
+            if pointCount != 15360 && pointCount != -1 {
                 continueChecking += 1
-                compundingMessage += "Error Number of Point Values Is Incorect, You need 65536 and you have \(pointCount) \n"
+                compundingMessage += "Error Number of Point Values Is Incorect, You need 15360 and you have \(pointCount) \n"
             }
             
             //MARK: Check Data Values For Out Of Range Voltage

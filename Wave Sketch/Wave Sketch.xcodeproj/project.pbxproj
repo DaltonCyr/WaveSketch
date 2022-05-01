@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C72C26B28160273006F0D2A /* GuideSketch Menu Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72C26A28160273006F0D2A /* GuideSketch Menu Buttons.swift */; };
+		5C72C26D281624A8006F0D2A /* FreeScketchMenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C72C26C281624A8006F0D2A /* FreeScketchMenuButtons.swift */; };
 		5C799D9F26F03D50000FA803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C799D9E26F03D50000FA803 /* AppDelegate.swift */; };
 		5C799DA126F03D50000FA803 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C799DA026F03D50000FA803 /* SceneDelegate.swift */; };
 		5C799DA326F03D50000FA803 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C799DA226F03D50000FA803 /* ViewController.swift */; };
@@ -14,10 +16,8 @@
 		5C799DA826F03D53000FA803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C799DA726F03D53000FA803 /* Assets.xcassets */; };
 		5C799DAB26F03D53000FA803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C799DA926F03D53000FA803 /* LaunchScreen.storyboard */; };
 		5C7C4C142725E1C000B6F78B /* ErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C132725E1C000B6F78B /* ErrorHandle.swift */; };
-		5C7C4C172725E26B00B6F78B /* FreeSketchPickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C162725E26B00B6F78B /* FreeSketchPickers.swift */; };
 		5C7C4C192725E46C00B6F78B /* AlertPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C182725E46C00B6F78B /* AlertPopUp.swift */; };
 		5C7C4C1B2725E4EA00B6F78B /* FreeSketchTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C1A2725E4EA00B6F78B /* FreeSketchTextFields.swift */; };
-		5C7C4C1E27261ACB00B6F78B /* GuideSketchPickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C1D27261ACB00B6F78B /* GuideSketchPickers.swift */; };
 		5C7C4C2027261E1D00B6F78B /* GuideDrawTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C1F27261E1D00B6F78B /* GuideDrawTextFields.swift */; };
 		5C7C4C262726292600B6F78B /* GuideErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C252726292600B6F78B /* GuideErrorHandle.swift */; };
 		5C7C4C282726296E00B6F78B /* GuideAlertPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C4C272726296E00B6F78B /* GuideAlertPopUp.swift */; };
@@ -33,6 +33,9 @@
 		5CADA14026F816C9001222F1 /* GuidedDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA13F26F816C9001222F1 /* GuidedDrawView.swift */; };
 		5CADA14226F8251E001222F1 /* ImportDrawVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA14126F8251E001222F1 /* ImportDrawVeiw.swift */; };
 		5CADA14626F82791001222F1 /* ImportSketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADA14526F82791001222F1 /* ImportSketchViewController.swift */; };
+		5CAE7D7D27A4CC4F006B0291 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE7D7C27A4CC4D006B0291 /* Bluetooth.swift */; };
+		5CAE7D7F27A4CEC4006B0291 /* DataSeperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE7D7E27A4CEC4006B0291 /* DataSeperation.swift */; };
+		5CAE7D8327A4E82B006B0291 /* SendWaveInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE7D8227A4E82B006B0291 /* SendWaveInfo.swift */; };
 		5CB2C5B8271F926A0019AEA9 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2C5B7271F926A0019AEA9 /* HelpViewController.swift */; };
 		5CE0E586272B7F0600AD523B /* DrawImportWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E585272B7F0600AD523B /* DrawImportWave.swift */; };
 		5CE0E588272B852500AD523B /* ImportSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0E587272B852500AD523B /* ImportSaveFile.swift */; };
@@ -64,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C72C26A28160273006F0D2A /* GuideSketch Menu Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GuideSketch Menu Buttons.swift"; sourceTree = "<group>"; };
+		5C72C26C281624A8006F0D2A /* FreeScketchMenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeScketchMenuButtons.swift; sourceTree = "<group>"; };
 		5C799D9B26F03D50000FA803 /* Wave Sketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Sketch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C799D9E26F03D50000FA803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C799DA026F03D50000FA803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,10 +80,8 @@
 		5C799DB126F03D54000FA803 /* Wave SketchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wave SketchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C799DBC26F03D54000FA803 /* Wave SketchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wave SketchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7C4C132725E1C000B6F78B /* ErrorHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandle.swift; sourceTree = "<group>"; };
-		5C7C4C162725E26B00B6F78B /* FreeSketchPickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeSketchPickers.swift; sourceTree = "<group>"; };
 		5C7C4C182725E46C00B6F78B /* AlertPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopUp.swift; sourceTree = "<group>"; };
 		5C7C4C1A2725E4EA00B6F78B /* FreeSketchTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeSketchTextFields.swift; sourceTree = "<group>"; };
-		5C7C4C1D27261ACB00B6F78B /* GuideSketchPickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideSketchPickers.swift; sourceTree = "<group>"; };
 		5C7C4C1F27261E1D00B6F78B /* GuideDrawTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDrawTextFields.swift; sourceTree = "<group>"; };
 		5C7C4C252726292600B6F78B /* GuideErrorHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideErrorHandle.swift; sourceTree = "<group>"; };
 		5C7C4C272726296E00B6F78B /* GuideAlertPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideAlertPopUp.swift; sourceTree = "<group>"; };
@@ -94,6 +97,9 @@
 		5CADA13F26F816C9001222F1 /* GuidedDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedDrawView.swift; sourceTree = "<group>"; };
 		5CADA14126F8251E001222F1 /* ImportDrawVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDrawVeiw.swift; sourceTree = "<group>"; };
 		5CADA14526F82791001222F1 /* ImportSketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportSketchViewController.swift; sourceTree = "<group>"; };
+		5CAE7D7C27A4CC4D006B0291 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		5CAE7D7E27A4CEC4006B0291 /* DataSeperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeperation.swift; sourceTree = "<group>"; };
+		5CAE7D8227A4E82B006B0291 /* SendWaveInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendWaveInfo.swift; sourceTree = "<group>"; };
 		5CB2C5B7271F926A0019AEA9 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		5CE0E585272B7F0600AD523B /* DrawImportWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawImportWave.swift; sourceTree = "<group>"; };
 		5CE0E587272B852500AD523B /* ImportSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportSaveFile.swift; sourceTree = "<group>"; };
@@ -156,8 +162,8 @@
 				5C799D9E26F03D50000FA803 /* AppDelegate.swift */,
 				5C799DA026F03D50000FA803 /* SceneDelegate.swift */,
 				5C799DA226F03D50000FA803 /* ViewController.swift */,
-				5C8261952744C54F008891AE /* ConnectAWGViewController.swift */,
 				5C799DA426F03D50000FA803 /* Main.storyboard */,
+				5CAE7D7B279E434F006B0291 /* Bluetooth */,
 				5CE0E58D272BB1D300AD523B /* HelpViewController */,
 				5C7C4C2F2727A29400B6F78B /* ImportSketch Extra Files */,
 				5C7C4C1C272619DA00B6F78B /* GuidSketch Extra Files */,
@@ -173,9 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				5CADA12F26F6AA8F001222F1 /* FreeSketchViewController.swift */,
+				5C72C26C281624A8006F0D2A /* FreeScketchMenuButtons.swift */,
 				5CADA13926F6DEA8001222F1 /* FreeDrawVeiw.swift */,
 				5C7C4C132725E1C000B6F78B /* ErrorHandle.swift */,
-				5C7C4C162725E26B00B6F78B /* FreeSketchPickers.swift */,
 				5C7C4C182725E46C00B6F78B /* AlertPopUp.swift */,
 				5C7C4C2D272663F700B6F78B /* FreeSaveFile.swift */,
 				5C7C4C1A2725E4EA00B6F78B /* FreeSketchTextFields.swift */,
@@ -187,10 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				5CADA13726F6C700001222F1 /* GuidedSketchViewController.swift */,
+				5C72C26A28160273006F0D2A /* GuideSketch Menu Buttons.swift */,
 				5CADA13F26F816C9001222F1 /* GuidedDrawView.swift */,
 				5C7C4C2B2726608800B6F78B /* GuideSaveFile.swift */,
 				5C7C4C2927263BEA00B6F78B /* DrawingFunctions.swift */,
-				5C7C4C1D27261ACB00B6F78B /* GuideSketchPickers.swift */,
 				5C7C4C1F27261E1D00B6F78B /* GuideDrawTextFields.swift */,
 				5C7C4C252726292600B6F78B /* GuideErrorHandle.swift */,
 				5C7C4C272726296E00B6F78B /* GuideAlertPopUp.swift */,
@@ -202,16 +208,27 @@
 			isa = PBXGroup;
 			children = (
 				5CADA14526F82791001222F1 /* ImportSketchViewController.swift */,
-				5CADA14126F8251E001222F1 /* ImportDrawVeiw.swift */,
 				5CE0E585272B7F0600AD523B /* DrawImportWave.swift */,
 				5C8261932744B04C008891AE /* ImportDrawTextFeild.swift */,
 				5C7C4C302727A2DE00B6F78B /* VoltageListConverter.swift */,
+				5CADA14126F8251E001222F1 /* ImportDrawVeiw.swift */,
 				5CE0E587272B852500AD523B /* ImportSaveFile.swift */,
 				5CE0E590272C59B400AD523B /* ImportErrorHandle.swift */,
 				5CE0E589272B8EFF00AD523B /* ImportPopUp.swift */,
 				5CE0E58B272BAFAC00AD523B /* WaveInfoDisplay.swift */,
 			);
 			path = "ImportSketch Extra Files";
+			sourceTree = "<group>";
+		};
+		5CAE7D7B279E434F006B0291 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				5C8261952744C54F008891AE /* ConnectAWGViewController.swift */,
+				5CAE7D7C27A4CC4D006B0291 /* Bluetooth.swift */,
+				5CAE7D7E27A4CEC4006B0291 /* DataSeperation.swift */,
+				5CAE7D8227A4E82B006B0291 /* SendWaveInfo.swift */,
+			);
+			path = Bluetooth;
 			sourceTree = "<group>";
 		};
 		5CE0E58D272BB1D300AD523B /* HelpViewController */ = {
@@ -363,14 +380,17 @@
 			files = (
 				5C8261942744B04C008891AE /* ImportDrawTextFeild.swift in Sources */,
 				5C7C4C262726292600B6F78B /* GuideErrorHandle.swift in Sources */,
+				5C72C26D281624A8006F0D2A /* FreeScketchMenuButtons.swift in Sources */,
+				5CAE7D7D27A4CC4F006B0291 /* Bluetooth.swift in Sources */,
+				5CAE7D7F27A4CEC4006B0291 /* DataSeperation.swift in Sources */,
 				5CE0E591272C59B400AD523B /* ImportErrorHandle.swift in Sources */,
 				5CE0E588272B852500AD523B /* ImportSaveFile.swift in Sources */,
 				5C7C4C192725E46C00B6F78B /* AlertPopUp.swift in Sources */,
+				5C72C26B28160273006F0D2A /* GuideSketch Menu Buttons.swift in Sources */,
 				5CE0E58C272BAFAC00AD523B /* WaveInfoDisplay.swift in Sources */,
 				5CADA13826F6C700001222F1 /* GuidedSketchViewController.swift in Sources */,
 				5CADA14626F82791001222F1 /* ImportSketchViewController.swift in Sources */,
 				5C799DA326F03D50000FA803 /* ViewController.swift in Sources */,
-				5C7C4C1E27261ACB00B6F78B /* GuideSketchPickers.swift in Sources */,
 				5C7C4C282726296E00B6F78B /* GuideAlertPopUp.swift in Sources */,
 				5C799D9F26F03D50000FA803 /* AppDelegate.swift in Sources */,
 				5CADA14226F8251E001222F1 /* ImportDrawVeiw.swift in Sources */,
@@ -383,8 +403,8 @@
 				5CE0E586272B7F0600AD523B /* DrawImportWave.swift in Sources */,
 				5C7C4C312727A2DE00B6F78B /* VoltageListConverter.swift in Sources */,
 				5C8261962744C54F008891AE /* ConnectAWGViewController.swift in Sources */,
+				5CAE7D8327A4E82B006B0291 /* SendWaveInfo.swift in Sources */,
 				5C7C4C142725E1C000B6F78B /* ErrorHandle.swift in Sources */,
-				5C7C4C172725E26B00B6F78B /* FreeSketchPickers.swift in Sources */,
 				5CADA13A26F6DEA8001222F1 /* FreeDrawVeiw.swift in Sources */,
 				5C7C4C2027261E1D00B6F78B /* GuideDrawTextFields.swift in Sources */,
 				5C799DA126F03D50000FA803 /* SceneDelegate.swift in Sources */,
@@ -567,7 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YM777GP2M;
 				INFOPLIST_FILE = "Wave Sketch/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YM777GP2M;
 				INFOPLIST_FILE = "Wave Sketch/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

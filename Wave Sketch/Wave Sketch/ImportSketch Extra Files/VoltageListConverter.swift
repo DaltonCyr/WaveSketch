@@ -17,10 +17,10 @@ extension ImportSketchViewController {
         var alteredVoltageList = ListOfVoltages
         var yAxisPoints = [Double]()
         
-        if ListOfVoltages.count < 65536 || ListOfVoltages.count > 65536{
+        if ListOfVoltages.count < 15360 || ListOfVoltages.count > 15360{
             print("Returned")
             continueChecking += 1
-            compundingMessage += "Error Number of Voltage Values Is Incorect, You need 65536 and you have \(ListOfVoltages.count) \n"
+            compundingMessage += "Error Number of Voltage Values Is Incorect, You need 5210 and you have \(ListOfVoltages.count) \n"
             return []
             
         }

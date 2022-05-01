@@ -8,9 +8,14 @@
 import UIKit
 
 class FreeDrawVeiw: UIView {
-
+    var trackedBackwardsDraw = false
+    
+    
+   
 // MARK: - FreeDrawView Definition
 
+    
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
@@ -58,7 +63,7 @@ class FreeDrawVeiw: UIView {
         context.strokePath()
 // MARK: - Drawing Users Line
 
-        
+        if trackedBackwardsDraw != true {
         for (i, p) in linePoint.enumerated(){
             if i == 0 {
                 context.move(to: p)
@@ -74,6 +79,26 @@ class FreeDrawVeiw: UIView {
     
      
         context.strokePath()
+        }else{
+            for (i, p) in linePoint.enumerated(){
+                if i == 0 {
+                    context.move(to: p)
+                } else{
+                    
+                    context.addLine(to: p)
+                
+                }
+            }
+            context.setStrokeColor(UIColor.red.cgColor)
+            context.setLineWidth(5)
+            context.setLineCap(.butt)
+            context.strokePath()
+        }
+        
+        if trackedBackwardsDraw == true{
+            
+            
+        }
     }
 
     
@@ -82,6 +107,7 @@ class FreeDrawVeiw: UIView {
     var linePoint = [CGPoint]()
 // MARK: - Tracking User Touches
 
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard var newLoc = touches.first?.location(in: nil) else { return }
         
@@ -94,6 +120,8 @@ class FreeDrawVeiw: UIView {
             nonLine.append(newLoc)
             linePoint.append(nonLine[nonLine.count-1])
         }else{
+            trackedBackwardsDraw = true
+            
             setNeedsDisplay()
           
         }
@@ -102,7 +130,10 @@ class FreeDrawVeiw: UIView {
 
         setNeedsDisplay()
         
+        
         }
+    
+   
 
 
 
